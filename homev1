@@ -1,0 +1,5 @@
+print("Om Namah shivaya")
+print("Om Namah shivaya\nRam\nKrishna")
+print("hay"+"Rama")
+print("hay"+" "+"Rama")
+print("hay"+" Rama")
