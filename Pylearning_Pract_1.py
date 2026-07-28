@@ -249,6 +249,8 @@ tx = ["Hello", "siva","prasad"]
 print([i.upper() for i in tx])
 
 """
+
+"""
 #tuple
 tp_a = ("Shiva", "Keshva" , "ganesh", "Krishna", "Govnda", " Shiva")
 
@@ -283,3 +285,47 @@ print("after adding tuple to tuple", b)
 # print(b)
 
 print(tp_a.count("Shiva"))
+#set
+set_a = set()
+print(type(set_a))
+setb = {1,10,49, 51, "pin no"}
+
+print(setb)
+print(type(setb))
+
+for i in setb:
+    print(i)
+
+# adding to set
+setb.add(28)
+
+print(setb)
+
+cset= {19, 25,15, "day"}
+
+setb.update(cset)
+
+print(setb)
+
+"""
+
+# Dictonary
+dt = {"Brand" : "Samsung" , "Model" : "S25", "year" : 25, "OS": 16}
+
+print(dt)
+print(type(dt))
+
+print("accessing dictornay based on key",dt["Model"])
+
+print("Dictornay all keys:", dt.keys())
+
+print("Dictornay accessing all values;",dt.values())
+
+for k, v in dt.items():
+    print(k,":",v)
+
+for k in dt.keys():
+    print(k)
+
+for v in dt.values():
+    print(v)
