@@ -250,6 +250,8 @@ print([i.upper() for i in tx])
 
 """
 #tuple
+
+"""
 tp_a = ("Shiva", "Keshva" , "ganesh", "Krishna", "Govnda", " Shiva")
 
 print(tp_a)
@@ -283,3 +285,139 @@ print("after adding tuple to tuple", b)
 # print(b)
 
 print(tp_a.count("Shiva"))
+
+"""
+"""
+#functions
+#summing of all list elements
+
+def summationlt(l):
+    s = 0
+    for i in l:
+        s+= i
+    return s
+
+lt = [1,5,8,9]
+
+print(summationlt(lt))
+
+#print(sum(lt)
+
+def maximumlt(m):
+    s = 0
+    for i in m:
+        if i> s:
+            s=i
+    return s
+
+mlt = [7,1,9,54,67]
+
+print(maximumlt(mlt))
+
+print(max(mlt))
+
+#* args non key word arguments
+def addit(* num):
+    a =0
+    for i in num:
+        a+=i
+    return a
+print(addit(4,8,52,17))
+
+print(addit(14,6,12,7))
+
+print(addit(*lt))
+print(addit(*lt,*mlt))
+
+x = lambda a,b : a+b
+
+print(x(7,34))
+
+#map(function, list)
+def sqrt(n):
+    return n**2
+
+l = [1,2,3,4,5.9,14]
+print(map(sqrt,l))
+print(list(map(sqrt,l)))
+
+print(list(map(lambda n : n**2, l)))
+
+#filter
+# to filter even numbers
+def evenno(n):
+    return n%2==0
+
+print(evenno(6))
+
+print(list(filter(evenno,l)))
+
+
+#OS Module
+import os
+a = os.getcwd()
+
+print(a)
+
+import os
+
+# 1. Define a target folder path safely
+target_dir = os.path.join(os.getcwd(), "ProjectData")
+
+# 2. Check if it exists; if not, create it
+if not os.path.exists(target_dir):
+    os.mkdir(target_dir)
+    print(f"Directory created at: {target_dir}")
+else:
+    print("Directory already exists.")
+
+# 3. List everything in the current working directory
+print("Current directory files:")
+for item in os.listdir(os.getcwd()):
+    print(f"- {item}")
+"""
+#Date & Datetime module
+
+from datetime import  date , datetime
+
+td = date.today()
+print(td)
+
+cd = date(2026,8,28)
+print("Custom date:", cd)
+
+now_dt = datetime.now()
+
+print(now_dt )
+print(type(now_dt))
+format =now_dt.strftime('%Y-%m-%d %H:%M')
+print(format)
+print(type(format))
+
+dt_for =datetime.strptime(format,'%Y-%m-%d %H:%M')
+
+print(dt_for)
+
+print(type(dt_for))
+
+def divd(x,y):
+    try:
+        res = x//y
+        return res
+    except:
+        print("Error occuring")
+
+print(divd(46,3))
+
+print(divd(20,0))
+
+def divide(x,y):
+    try:
+        res = x//y
+        return res
+    except Exception as e:
+        print("Error occuring -", e)
+        return "Division failed please check your denomoroter it should not be 0"
+
+d= divide(46,0)
+print(d)
